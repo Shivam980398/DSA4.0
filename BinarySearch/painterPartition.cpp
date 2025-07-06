@@ -1,24 +1,22 @@
-// Book Allocaftion Problem
-//  Problem: Allocate books to students such that the maximum number of pages allocated to a student is minimized.
-//  Input: Number of books, number of students, and an array representing the number of pages in each book.
-//  Output: The minimum possible value of the maximum number of pages allocated to a student.
+// Problem: Painter's Partition Problem
+// Problem: Allocate areas to painters such that the maximum area allocated to a painter is minimized.
 #include <bits/stdc++.h>
 using namespace std;
 
 int checkPainters(int arr[], int n, int areas)
 {
     int painters = 1;
-    int current_wall = 0;
+    int current_area = 0;
     for (int i = 0; i < n; i++)
     {
-        if (current_wall + arr[i] <= areas)
+        if (current_area + arr[i] <= areas)
         {
-            current_wall += arr[i];
+            current_area += arr[i];
         }
         else
         {
             painters++;
-            current_wall = arr[i];
+            current_area = arr[i];
         }
     }
     return painters;
