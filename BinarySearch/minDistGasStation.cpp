@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// Brute Force Approach
 int minDistance(vector<int> &stations, int k, int n)
 {
     vector<int> howMany(n - 1, 0);
