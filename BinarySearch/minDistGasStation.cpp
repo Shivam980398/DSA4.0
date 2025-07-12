@@ -70,7 +70,7 @@ int noOfGasStationsRequired(long double mid, vector<int> &stations)
     for (int i = 1; i < stations.size(); i++)
     {
         int noInBetween = (stations[i] - stations[i - 1]) / mid;
-        if (stations[i] - stations[i - 1] / mid == noInBetween * mid)
+        if ((stations[i] - stations[i - 1]) / mid == noInBetween * mid)
         {
             noInBetween--;
         }
@@ -102,9 +102,9 @@ int minDistOptimal(vector<int> &stations, int k, int n)
 }
 int main()
 {
-    vector<int> stations = {1, 13, 17, 23};
-    vector<int> stations = {1, 7};
-    int k = 5; // Number of gas stations to be added
+    // vector<int> stations = {1, 13, 17, 23};
+    vector<int> stations = {1, 2, 3, 4, 5, 6};
+    int k = 3; // Number of gas stations to be added
     int n = stations.size();
     // cout << minDistance(stations, k, n);
     // cout << minDist(stations, k, n);
