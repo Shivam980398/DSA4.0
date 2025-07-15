@@ -100,6 +100,7 @@ int minDistOptimal(vector<int> &stations, int k, int n)
     }
     return high;
 }
+
 int main()
 {
     // vector<int> stations = {1, 13, 17, 23};
