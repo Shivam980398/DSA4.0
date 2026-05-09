@@ -120,8 +120,8 @@ void postorder(Node *root)
     {
         return;
     }
-    inorder(root->left);
-    inorder(root->right);
+    postorder(root->left);
+    postorder(root->right);
     cout << root->data << " ";
 }
 void preorder(Node *root)
@@ -131,8 +131,8 @@ void preorder(Node *root)
         return;
     }
     cout << root->data << " ";
-    inorder(root->left);
-    inorder(root->right);
+    preorder(root->left);
+    preorder(root->right);
 }
 int main()
 {

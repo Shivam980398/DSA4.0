@@ -1,0 +1,31 @@
+Sliding Window
+
+When to apply 
+
+When in question  ask for 
+Count of/in substring/subarrays
+And character’s freq is being talked about i.e  jiski freq k ke Barabar ho.
+
+
+jab bhi count or substring or subarrays ki baat ho
+
+Is case me ek baar sliding window ko jarur sochna chahiye.
+
+
+pattern 
+start and end 
+
+two variables point at start  --- i= start and j=start
+
+now start loop from start till end -- for(j;j<=end;j++)
+
+do what question ask -- eg increase count of character’s -- freq[ch[j]]++;
+
+now check for windowsize, fixed or variable length -- if(j-i+1>windowsize){}
+    then decrease the freq of char at ith index 
+    and move i++ i.e slide the window
+
+
+
+This is the Khandani template of Sliding window.
+
