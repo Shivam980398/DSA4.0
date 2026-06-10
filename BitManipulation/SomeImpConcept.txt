@@ -1,0 +1,63 @@
+In cpp this is a container
+bitset<32> b(n);
+what it do
+
+jo bhi n hai eg 5
+toh iska binary representation 101 hota hai wo isme store ho jayega
+
+like     0  0  0  0 ......1 0 1;
+index    31 30 29 28......2 1 0
+iske aage 32 bit complete krne ke liye 0 pad ho jayenge
+
+Ab jab hum b[0] access krenge toh hume right se pehla element milega i.e 1.
+
+Ab isme hamare kaam ka toh sirf 1 0 1 ,
+
+isme hum pta kr skte ki kisi int n ka highest set bit kaha hai by using
+
+int highestSetBit = log2(n);
+
+
+
+2nd concept ----
+if a number n is given or else a binary string string is given and ask is it alternating
+then what we can do
+
+first right shift n or binary string by 1 shift>>1
+And then take & with that result , we get 0
+
+eg          1 0 1 0 1 0
+n>>1        0 1 0 1 0 1
+n & (n>>1)  0 0 0 0 0 0
+but yaha ek problem hai
+maan lete n=8 hai
+  binary ---> 1 0 0 0
+  n>>1        0 1 0 0
+  n&(n>>1)    0 0 0 0
+
+  is case me bhi zero aa gya jbki alternating nhi hau
+  toh iska solution kya hai ki hum iska & ki bjaye xor le le
+
+   eg         1 0 1 0 1 0
+   n>>1       0 1 0 1 0 1
+   n^n>>1     1 1 1 1 1 1
+
+   if we get all 1's aa jaye (allsetbits) i.e it is alternating 
+
+  
+  eg          1 0 0 0
+  n>>1        0 1 0 0
+  n xor n>>1  1 1 0 0
+  not alternating
+
+   result  ==1 1 1 1 1 1
+  Or ye pta krna ki isme saare bit set 1 hai 
+
+  jo result aya usme +1 krke (result+1)
+  or uska & lenge result (result & (result+1))
+  agr 0 ayega i.e sare set bit the i.e 1 hai , else nhi
+
+  eg                      1  1  1  1  1  1
+  result+1             1  0  0  0  0  0  0 
+  result&(result+1)    0  0  0  0  0  0  0
+                       ^ yaha 0 pad ho jayega upper wale mai
