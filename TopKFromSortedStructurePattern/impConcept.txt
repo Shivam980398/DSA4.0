@@ -1,0 +1,26 @@
+How to identify
+
+Kth smallest ,  top k
+Kth largest , Best k
+
+Merge  K sorted lists/arrays given etc.
+
+Sorted rows in 2d matrix -> find top K elems
+Sorted columns in 2d matrix -> find top K elements
+
+Pair sum -> find top K elements, find minimum/max sum
+Subarray sums -> find top K
+
+
+In sab mai ye check krna chahiye ki kya 
+
+hum avoid kr skte generating all possibilities,
+can heap help, or can we use heap , 
+we only care about next Best i.e largest or smallest candidate
+
+
+Bss ese problem sabse pehle heap hamare mind mai ana chahiye,
+jisse adha kaam hamara ho jayega
+
+kuch tough version mai hume kuch extra logic lgane ki jrurat pd skti hai 
+jsise BS or segment tree and others
